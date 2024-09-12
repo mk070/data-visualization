@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+pandas
+plotly
+openpyxl
+flask-cors
+google-generativeai
