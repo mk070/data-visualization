@@ -7,7 +7,7 @@ const ChartDisplay = ({ data, chartType }) => {
   return (
     <div className="bg-white shadow-md rounded-lg p-6 mt-6">
       <h2 className="text-2xl font-bold text-primary mb-4">Chart Visualization</h2>
-      <div className="w-full h-96">
+      <div className="w-full h-full">
      
         {data.length > 0 ? (
           <Plot

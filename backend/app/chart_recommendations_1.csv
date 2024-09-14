@@ -1,0 +1,49 @@
+Data Type(s),Visualization Goal,Recommended Charts
+1 Numerical,Distribution,Histogram
+1 Numerical,Distribution,Box plot
+1 Categorical,Frequency (Count),Bar chart
+1 Categorical,Frequency (Count),Pie chart
+2 Numerical,Relationship,Scatter plot
+2 Numerical,Correlation,Scatter plot
+1 Numerical and 1 Categorical,Comparison,Bar chart
+1 Numerical and 1 Categorical,Comparison,Box plot
+1 Numerical and 1 Categorical,Comparison,Violin plot
+1 Categorical and 1 Numerical,Composition,Stacked bar chart
+1 Categorical and 1 Numerical,Composition,100% stacked bar chart
+Time Series (Numerical),Trend,Line chart
+Time Series (Numerical),Trend,Area chart
+1 Numerical,Distribution,Density plot
+2 Numerical,Relationship,Bubble chart
+1 Categorical,Frequency (Count),Pareto chart
+1 Numerical,Distribution,Ridge plot
+2 Numerical,Relationship,Hexbin plot
+1 Numerical and 1 Categorical,Comparison,Dot plot
+1 Categorical and 1 Numerical,Composition,Treemap
+2 Numerical,Relationship,Heatmap
+1 Categorical,Frequency (Count),Donut chart
+1 Numerical,Distribution,Boxen plot
+2 Numerical,Relationship,2D Density plot
+1 Categorical,Frequency (Count),Funnel chart
+1 Numerical and 1 Categorical,Comparison,Grouped bar chart
+1 Numerical and 1 Categorical,Comparison,Swarm plot
+Time Series (Numerical),Trend,Spline chart
+1 Numerical,Distribution,Stem-and-leaf plot
+1 Categorical,Frequency (Count),Bar chart (horizontal)
+2 Numerical,Relationship,Line of best fit
+1 Categorical and 1 Numerical,Composition,Mosaic plot
+1 Numerical,Distribution,Violin plot
+1 Categorical,Frequency (Count),Stacked bar chart
+2 Numerical,Relationship,Contour plot
+1 Numerical and 1 Categorical,Comparison,Stacked violin plot
+Time Series (Numerical),Trend,Step chart
+1 Numerical,Distribution,ECDF plot
+1 Categorical,Frequency (Count),Polar area chart
+2 Numerical,Relationship,Pair plot
+1 Categorical and 1 Numerical,Composition,Waterfall chart
+1 Numerical and 1 Categorical,Comparison,Segmented bar chart
+2 Numerical,Correlation,Scatterplot matrix
+Time Series (Numerical),Trend,Streamgraph
+1 Categorical,Frequency (Count),Waffle chart
+1 Numerical,Distribution,Histogram with KDE
+2 Numerical,Relationship,Dumbbell plot
+1 Numerical and 1 Categorical,Comparison,Population pyramid

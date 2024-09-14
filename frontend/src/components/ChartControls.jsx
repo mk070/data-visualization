@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
-const ChartControls = ({ columns, onChartUpdate }) => {
+const ChartControls = ({ columns, onChartUpdate, recommendedChartType  }) => {
   const [xAxis, setXAxis] = useState('');
   const [yAxis, setYAxis] = useState('');
   const [chartType, setChartType] = useState('');
+
+  useEffect(() => {
+    if (recommendedChartType && recommendedChartType !== 'table') {
+      setChartType(recommendedChartType);
+    }
+  }, [recommendedChartType]);
+
+  useEffect(() => {
+    if (columns.length > 0) {
+      setXAxis(columns[0]);
+      setYAxis(columns[1] || columns[0]);
+    }
+  }, [columns, chartType]);
+
 
   const isNumerical = (column) => {
     const numericalColumns = ['GPA', 'Credits_Completed', 'Age'];

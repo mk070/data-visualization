@@ -6,11 +6,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0d9488',
-        secondary: '#64748b',
-        accent: '#14b8a6',
+        primary: '#3B82F6', // Blue color for primary actions
+        secondary: '#10B981', // Green color for secondary actions
+        accent: '#6366F1', // Purple for hover states
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
+
   plugins: [],
 };
