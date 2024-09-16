@@ -73,7 +73,7 @@ const DataUploader = ({ onUploadComplete }) => {
       ) : (
         <div className="flex flex-col items-center">
           <p className="text-green-600 font-semibold mb-4">File uploaded successfully!</p>
-          {/* <div className="flex space-x-4">
+          <div className="flex space-x-4">
             <button
               onClick={() => onUploadComplete('analyze')}
               className="bg-primary text-white py-2 px-6 rounded-md hover:bg-primary-dark transition duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
@@ -86,7 +86,7 @@ const DataUploader = ({ onUploadComplete }) => {
             >
               Get Table
             </button>
-          </div> */}
+          </div>
         </div>
       )}
     </div>

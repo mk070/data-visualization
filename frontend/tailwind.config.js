@@ -11,7 +11,7 @@ module.exports = {
         accent: '#6366F1', // Purple for hover states
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Space Grotesk'],
       },
     },
   },
