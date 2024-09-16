@@ -142,7 +142,7 @@ const Home = () => {
                         ],
                         autoStart: true,
                         loop: true,
-                        delay: 50,
+                        delay: 80,
                     }}
                     />
                 </span>
