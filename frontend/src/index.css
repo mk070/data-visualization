@@ -3,35 +3,41 @@
 @tailwind utilities;
 
 
-/* Override Toastify styles to fit the design */
-.Toastify__toast-container {
-    font-family: 'Roboto', sans-serif; /* Tailwind font or your choice */
-  }
-  
-  .Toastify__toast {
-    background-color: #ffffff; /* Use Tailwind colors or your choice */
-    color: #333333; /* Text color */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
-  
-  .Toastify__toast--info {
-    border-left: 4px solid #3490dc; /* Tailwind blue-500 */
-  }
-  
-  .Toastify__toast--success {
-    border-left: 4px solid #38c172; /* Tailwind green-500 */
-  }
-  
-  .Toastify__toast--error {
-    border-left: 4px solid #e3342f; /* Tailwind red-500 */
-  }
-  
-  .Toastify__toast--warning {
-    border-left: 4px solid #ffed4a; /* Tailwind yellow-300 */
-  }
-  
-  .Toastify__close-button {
-    color: #333; /* Close button color */
-  }
-  
+/* Custom toast notification style */
+.Toastify__toast {
+  background-color: #fff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 16px;
+}
+
+.Toastify__toast--info {
+  background-color: #f0f8ff;
+  color: #0056b3;
+}
+
+.Toastify__toast--success {
+  background-color: #e6ffed;
+  color: #28a745;
+}
+
+.Toastify__toast--warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.Toastify__toast--error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.Toastify__toast-body {
+  font-size: 16px;
+}
+
+/* .Toastify__progress-bar {
+  background-color: #a72892;
+  border-radius: 0 0 12px 12px;
+} */

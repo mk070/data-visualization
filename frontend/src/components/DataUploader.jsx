@@ -41,55 +41,60 @@ const DataUploader = ({ onUploadComplete }) => {
 
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold text-primary mb-4">Upload Your Data</h2>
-      {!uploadSuccess ? (
-        <>
-          <div
-            {...getRootProps()}
-            className={`border-2 border-dashed rounded-md p-6 text-center cursor-pointer transition-colors ${
-              isDragActive ? 'border-blue-500 bg-blue-50' : 'border-gray-300 bg-gray-50'
-            }`}
-          >
-            <input {...getInputProps()} />
-            {file ? (
-              <p className="text-gray-700">
-                Selected file: <strong>{file.name}</strong>
-              </p>
-            ) : isDragActive ? (
-              <p className="text-gray-700">Drop the file here...</p>
-            ) : (
-              <p className="text-gray-700">
-                Drag and drop a CSV or Excel file here, or click to select a file.
-              </p>
-            )}
-          </div>
-          <button
-            onClick={handleUpload}
-            className="mt-4 w-full bg-primary text-white py-2 rounded-md hover:bg-primary-dark transition duration-300"
-          >
-            Upload
-          </button>
-        </>
-      ) : (
-        <div className="flex flex-col items-center">
-          <p className="text-green-600 font-semibold mb-4">File uploaded successfully!</p>
-          <div className="flex space-x-4">
-            <button
-              onClick={() => onUploadComplete('analyze')}
-              className="bg-primary text-white py-2 px-6 rounded-md hover:bg-primary-dark transition duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
-            >
-              Analyze Chart
-            </button>
-            <button
-              onClick={() => onUploadComplete('table')}
-              className="bg-secondary text-white py-2 px-6 rounded-md hover:bg-secondary-dark transition duration-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50"
-            >
-              Get Table
-            </button>
-          </div>
-        </div>
-      )}
+  <h2 className="text-3xl font-bold text-primary mb-6">Upload Your Data</h2>
+  
+  {!uploadSuccess ? (
+    <>
+      <div
+        {...getRootProps()}
+        className={`border-4 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all duration-300 ${
+          isDragActive ? 'border-blue-500 bg-blue-50' : 'border-gray-300 bg-gray-50 hover:bg-gray-100'
+        } shadow-md hover:shadow-lg`}
+      >
+        <input {...getInputProps()} />
+        {file ? (
+          <p className="text-gray-700 text-lg">
+            Selected file: <strong>{file.name}</strong>
+          </p>
+        ) : isDragActive ? (
+          <p className="text-gray-700 text-lg">Drop the file here...</p>
+        ) : (
+          <p className="text-gray-700 text-lg">
+            Drag and drop a CSV or Excel file here, or <span className="text-blue-600 underline">click to select a file</span>.
+          </p>
+        )}
+      </div>
+      
+      <button
+        onClick={handleUpload}
+        className="mt-6 w-full bg-gradient-to-r from-green-400 to-blue-500 text-white py-3 rounded-lg hover:from-green-500 hover:to-blue-600 transition duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+      >
+        Upload
+      </button>
+    </>
+  ) : (
+    <div className="flex flex-col items-center">
+      <p className="text-green-600 font-semibold text-lg mb-4">File uploaded successfully!</p>
+      
+      <div className="flex space-x-6">
+        <button
+          onClick={() => onUploadComplete('analyze')}
+          className="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-2 px-6 rounded-lg hover:from-blue-500 hover:to-blue-700 transition duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        >
+          Analyze Chart
+        </button>
+        
+        <button
+          onClick={() => onUploadComplete('table')}
+          className="bg-gradient-to-r from-purple-400 to-purple-600 text-white py-2 px-6 rounded-lg hover:from-purple-500 hover:to-purple-700 transition duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+        >
+          Get Table
+        </button>
+      </div>
     </div>
+  )}
+</div>
+
   );
 };
 
