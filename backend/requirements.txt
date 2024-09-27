@@ -5,3 +5,7 @@ plotly
 openpyxl
 flask-cors
 google-generativeai
+mysql-connector-python
+flask-cors
+
+
