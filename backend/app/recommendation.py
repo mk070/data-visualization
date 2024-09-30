@@ -14,23 +14,23 @@ def recommend_chart_type(query_text, columns, data):
     query_text = query_text.lower()
 
     # Example rule-based checks for chart type recommendation
-    if "compare" in query_text or "difference" in query_text:
+    if "compare" in query_text or "difference" in query_text or "bar" in query_text:
         # Comparison question (e.g., comparing GPA across departments)
         return "bar"
 
-    elif "trend" in query_text or "over time" in query_text:
+    elif "trend" in query_text or "over time" in query_text or "line" in query_text:
         # Time-based trends usually need a line chart
         return "line"
 
-    elif "distribution" in query_text or "histogram" in query_text:
+    elif "distribution" in query_text or "histogram" in query_text or "histogram" in query_text:
         # Distribution-related queries suggest histograms
         return "histogram"
 
-    elif "correlation" in query_text or "relationship" in query_text:
+    elif "correlation" in query_text or "relationship" in query_text or "scatter" in query_text :
         # Relationship between two variables suggests scatter plot
         return "scatter"
 
-    elif "proportion" in query_text or "percentage" in query_text:
+    elif "proportion" in query_text or "percentage" in query_text or "pie" in query_text :
         # Proportions are best represented with pie charts
         return "pie"
 

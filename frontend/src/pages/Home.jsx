@@ -22,6 +22,8 @@ const Home = () => {
   const [recommendedChartType, setRecommendedChartType] = useState('');
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false); // Add Loading State
+  const [xAxisLabel, setXAxisLabel] = useState(''); // X-Axis label
+  const [yAxisLabel, setYAxisLabel] = useState(''); // Y-Axis label
 
   const handleQuerySubmit = async () => {
     if (!query) {
@@ -68,6 +70,11 @@ const Home = () => {
         // Set the query result and columns from the response
         setQueryResult(queryData);
         setColumns(columnsData);
+        // Dynamically set X-Axis and Y-Axis labels based on query result columns
+        if (columnsData.length >= 2) {
+          setXAxisLabel(columnsData[0]);
+          setYAxisLabel(columnsData[1]);
+        }
 
         // If the user has selected "analyze", set the chart type
         if (userChoice === 'analyze') {
@@ -91,6 +98,7 @@ const Home = () => {
   }, [queryResult, columns, chartType]);
 
   const handleChartUpdate = ({ xAxis, yAxis, chartType }) => {
+    console.log("handleChartUpdate")
     const data = queryResult;
 
     if (!data || data.length === 0) {
@@ -121,6 +129,11 @@ const Home = () => {
             break;
 
         case 'line':
+            // Line chart, typically time on x-axis, numerical data on y-axis
+            xValues = data.map((item) => item[xAxis]);
+            yValues = data.map((item) => item[yAxis]);
+            break;
+        case 'histogram':
             // Line chart, typically time on x-axis, numerical data on y-axis
             xValues = data.map((item) => item[xAxis]);
             yValues = data.map((item) => item[yAxis]);
@@ -259,7 +272,8 @@ const Home = () => {
                   {chartData.length > 0 ? (
                     <div className="flex flex-col">
                       
-                      <ChartDisplay data={chartData} chartType={chartType} />
+                      <ChartDisplay data={chartData} chartType={chartType} xAxisLabel={xAxisLabel} yAxisLabel={yAxisLabel} // Passing Y-Axis Label
+ />
                       <ChartControls
                         columns={columns}
                         onChartUpdate={handleChartUpdate}

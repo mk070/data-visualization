@@ -30,7 +30,7 @@ def upload_file():
         host='localhost',
         user='root',
         password='root',
-        database='data-visual'
+        database='test6'
     )
 
     # Create or update the table dynamically
@@ -61,7 +61,7 @@ def filter_query():
             host='localhost',
             user='root',
             password='root',
-            database='data-visual'
+            database='test6'
         )
 
         df = pd.read_sql_query(f"SELECT * FROM {table_name} LIMIT 1", conn)
@@ -105,7 +105,7 @@ def query_data():
             host='localhost',
             user='root',
             password='root',
-            database='data-visual'
+            database='test6'
         )
 
         try:
